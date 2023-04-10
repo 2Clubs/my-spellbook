@@ -17,7 +17,12 @@ db.on("disconnected", () => console.log("mongo disconnected"));
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 
+// Routes / Controllers
+
+app.get('/', (req, res) => {
+    res.render('index.ejs')
+})
 
 // Listener
 const PORT = process.env.PORT
-app.listen(PORT,() =>(`listening on port ${PORT}`))
+app.listen(PORT,() =>console.log(`listening on port ${PORT}`))
