@@ -6,6 +6,7 @@ const spellSchema = new Schema(
         name: String,
         level: Number,
         description: String,
+        range: String,
         school: String,
         materials: String,
         components: String,
