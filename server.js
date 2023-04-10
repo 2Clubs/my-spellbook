@@ -20,7 +20,7 @@ app.use(methodOverride('_method'))
 // Routes / Controllers
 
 app.get('/', (req, res) => {
-    res.render('index.ejs')
+    res.redirect('/spells')
 })
 
 // Listener
