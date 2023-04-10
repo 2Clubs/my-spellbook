@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 const Spell = require('./models/spells')
 const spellArr = require('./spellsArr')
-require('dotenv').config
+require('dotenv').config()
 
 mongoose.connect(process.env.DATABASE_URL)
 

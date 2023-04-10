@@ -5,11 +5,11 @@ const spellSchema = new Schema(
     {
         name: String,
         level: Number,
-        description: String,
+        description: Array,
         range: String,
         school: String,
         materials: String,
-        components: String,
+        components: Array,
         castingTime: String,
         duration: String,
     },
