@@ -23,6 +23,9 @@ app.get('/', (req, res) => {
     res.redirect('/spells')
 })
 
+const spellsController = require('./controllers/spells')
+app.use('/spells', spellsController)
+
 // Listener
 const PORT = process.env.PORT
 app.listen(PORT,() =>console.log(`listening on port ${PORT}`))
