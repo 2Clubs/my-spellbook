@@ -24,7 +24,7 @@ app.use(
   })
 );
 app.use(methodOverride("_method"));
-
+app.use(express.static('public'))
 // Routes / Controllers
 
 const spellsController = require("./controllers/spells");
