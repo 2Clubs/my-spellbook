@@ -7,6 +7,10 @@
     <title><%= spell.name %></title>
 </head>
 <body>
+    <header>
+        <%- include('../partials/nav.ejs') %>
+    </header>
+    <main>
     <h1><%= spell.name %> - 
         <% if (spell.level > 0) { %>
             Level <%= spell.level %> <%= spell.school %> Spell</h1>
@@ -14,7 +18,7 @@
             Cantrip - <%= spell.school %>
             <% } %>
         </h1>
-    <section>
+    <section id="description">
     <h2>Description</h2>
     <ul>
         <% spell.description.forEach(paragraph => { %>
@@ -29,5 +33,30 @@
     <div id="casting-time">Casting Time: <%= spell.castingTime %></div>
     <div id="duration">Duration: <%= spell.duration %></div>
 </section>
+<section id="extras">
+    <div id="components">
+        <% if (spell.components.includes('M')) { %>
+            Components: <ul>
+                <% spell.components.forEach(component => { %>
+                    <li>
+                        <%= component %>
+                    </li>
+                    <% }) %>
+                    (<%= spell.materials %>)
+                </ul>
+        <% } else { %>
+            Components: 
+            <ul>
+        <% spell.components.forEach(component => { %>
+            <li>
+                <%= component %>
+            </li>
+            <% }) %>
+        </ul>
+            <% } %>
+
+</div>
+</section>
+</main>
 </body>
 </html>
