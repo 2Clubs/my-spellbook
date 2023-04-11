@@ -10,11 +10,40 @@
     <%- include('./partials/nav.ejs') %>
     <ul>
         <% spells.forEach(spell => { %>
-         <li>
-            <a href="/spells/<%= spell._id %>">
-                <%= spell.name %>
-            </a>
-         </li>
+            <% switch (spell.level) {
+                case 0: %>
+                Cantrips
+                <li>
+                    <a href="/spells/<%= spell._id %>">
+                        <%= spell.name %>
+                    </a>
+                </li>
+                    <% break;
+                case 1: %>
+                Level 1 spells
+                <li>
+                    <a href="/spells/<%= spell._id %>">
+                        <%= spell.name %>
+                    </a>
+                </li>
+                <% break;
+                case 2: %>
+                Level 2 spells
+                <li>
+                    <a href="/spells/<%= spell._id %>">
+                        <%= spell.name %>
+                    </a>
+                </li>
+                   <% break;
+                   case 3: %>
+                Level 3 spells
+                <li>
+                    <a href="/spells/<%= spell._id %>">
+                        <%= spell.name %>
+                    </a>
+                </li>
+                   <% break;  
+            } %>
         <% }) %>
     </ul>
 </body>
