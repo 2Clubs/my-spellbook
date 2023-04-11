@@ -33,11 +33,12 @@ app.use("/spells", spellsController);
 const sessionsController = require("./controllers/sessions");
 app.use("/sessions", sessionsController);
 
+const usersController = require('./controllers/users')
+app.use('/users', usersController)
+
 app.get("/", (req, res) => {
   if (req.session.currentUser) {
-    res.render("dashboard.ejs", {
-      currentUser: req.session.currentUser,
-    });
+    res.redirect('/spells');
   } else {
     res.render("index.ejs", {
       currentUser: req.session.currentUser,
