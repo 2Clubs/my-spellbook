@@ -1,6 +1,11 @@
 <nav>
-    <h1>
-        My Spellbook
-    </h1>
-    <a href="#">Register</a>
+  <% if(currentUser) { %>
+        <a href="/">Home</a>
+        <form action="/sessions?_method=DELETE" method="post">
+            <input type="submit" id="Log Out" />
+        </form>
+  <% } else { %>
+        <h1>My Spellbook</h1>
+        <a href="#">Register</a>
+  <% } %>
 </nav>
