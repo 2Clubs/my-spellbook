@@ -9,3 +9,12 @@ userRouter.get('/new', (req, res) => {
         currentUser: req.session.currentUser
     })
 })
+
+// Create (registration route)
+userRouter.post('/', (req, res) => {
+    req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
+    const createdUser = new User(req.body)
+    createdUser.save().then(res.redirect("/"))
+})
+
+module.exports = userRouter
