@@ -12,6 +12,11 @@ spellsRouter.get('/', async (req, res) => {
     })
 })
 
-
-
+// Show
+spellsRouter.get('/:id', async (req, res) => {
+    const foundSpell = await Spell.findById(req.params.id).exec()
+    res.render('spells/show.ejs', {
+        spell: foundSpell
+    })
+})
 module.exports = spellsRouter

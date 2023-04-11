@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spellbook Dashboard</title>
+    <title><%= spell.name %></title>
 </head>
 <body>
-    <%- include('./partials/nav.ejs') %>
+    <h1><%= spell.name %></h1>
+    <section>
+    <h2>Description</h2>
     <ul>
-        <% spells.forEach(spell => { %>
+        <% spell.description.forEach(paragraph => { %>
          <li>
-            <a href="/spells/<%= spell._id %>">
-                <%= spell.name %>
-            </a>
+            <%= paragraph %>
          </li>
         <% }) %>
     </ul>
+</section>
 </body>
 </html>
