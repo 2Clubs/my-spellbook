@@ -8,6 +8,14 @@
 </head>
 <body>
     <%- include('./partials/nav.ejs') %>
-    
+    <ul>
+        <% spells.forEach(spell => { %>
+         <li>
+            <a href="#">
+                <%= spell.name %>
+            </a>
+         </li>
+        <% }) %>
+    </ul>
 </body>
 </html>
