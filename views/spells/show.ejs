@@ -7,7 +7,13 @@
     <title><%= spell.name %></title>
 </head>
 <body>
-    <h1><%= spell.name %></h1>
+    <h1><%= spell.name %> - 
+        <% if (spell.level > 0) { %>
+            Level <%= spell.level %> <%= spell.school %> Spell</h1>
+        <% } else { %>
+            Cantrip - <%= spell.school %>
+            <% } %>
+        </h1>
     <section>
     <h2>Description</h2>
     <ul>
@@ -17,6 +23,11 @@
          </li>
         <% }) %>
     </ul>
+</section>
+<section id="sub-description">
+    <div id="range">Range: <%= spell.range %></div>
+    <div id="casting-time">Casting Time: <%= spell.castingTime %></div>
+    <div id="duration">Duration: <%= spell.duration %></div>
 </section>
 </body>
 </html>
