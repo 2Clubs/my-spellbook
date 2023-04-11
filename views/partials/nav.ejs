@@ -2,10 +2,10 @@
   <% if(currentUser) { %>
         <a href="/">Home</a>
         <form action="/sessions?_method=DELETE" method="post">
-            <input type="submit" id="Log Out" />
+            <input type="submit" value="Log Out" />
         </form>
   <% } else { %>
         <h1>My Spellbook</h1>
-        <a href="../users/new.ejs">Register</a>
+        <a href="/users/new">Register</a>
   <% } %>
 </nav>
