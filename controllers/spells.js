@@ -26,8 +26,15 @@ spellsRouter.delete('/:id', async (req, res) => {
 })
 
 // Update
-
+spellsRouter.put('/:id', async (req, res) => {
+    await Spell.findByIdAndUpdate(req.params.id, req.body)
+    res.redirect('/')
+})
 // Create
+spellsRouter.post('/', (req, res) => {
+    const createdSpell = new Spell(req.body)
+    createdSpell.save().then(res.redirect('/'))
+})
 
 // Edit
 spellsRouter.get('/:id/edit', async (req, res) => {

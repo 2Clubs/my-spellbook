@@ -12,7 +12,7 @@
     </header>
     <main>
         <h1>Edit Spell: <%= spell.name %></h1>
-        <form action="/spells/<%= spell.id %>" method="post" id="edit-spell">
+        <form action="/spells/<%= spell.id %>?_method=PUT" method="post" id="edit-spell">
             <label for="name">Name: </label>
             <input type="text" name="name" id="name" value="<%= spell.name %>">
 
