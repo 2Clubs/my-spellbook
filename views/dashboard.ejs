@@ -7,7 +7,11 @@
     <title>Spellbook Dashboard</title>
 </head>
 <body>
+    <header>
     <%- include('./partials/nav.ejs') %>
+    <a href="/spells/new">Add Spell</a>
+</header>
+<main>
     <ul>
         <% spells.forEach(spell => { %>
             <% switch (spell.level) {
@@ -94,5 +98,6 @@
             } %>
         <% }) %>
     </ul>
+</main>
 </body>
 </html>
