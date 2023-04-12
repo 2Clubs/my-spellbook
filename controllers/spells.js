@@ -12,6 +12,21 @@ spellsRouter.get('/', async (req, res) => {
     })
 })
 
+// Destroy
+
+// Update
+
+// Create
+
+// Edit
+spellsRouter.get('/:id/edit', async (req, res) => {
+    const foundSpell = await Spell.findById(req.params.id)
+    res.render('spells/edit.ejs', {
+        spell: foundSpell,
+        currentUser: req.session.currentUser
+    })
+})
+
 // Show
 spellsRouter.get('/:id', async (req, res) => {
     const foundSpell = await Spell.findById(req.params.id).exec()

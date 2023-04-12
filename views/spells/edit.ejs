@@ -4,9 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit | <%= spell.name %></title>
 </head>
 <body>
-    
+    <header>
+        <%- include('../partials/nav.ejs') %>
+    </header>
+    <main>
+        <h1>Edit Spell: <%= spell.name %></h1>
+        <form action="/spells/<%= spell.id %>" method="post" id="edit-spell">
+            <label for="name">Name: </label>
+            <input type="text" name="name" id="name" value="<%= spell.name %>">
+
+            <label for="level">Level: </label>
+            <!-- used to find min/max https://www.w3schools.com/tags/att_input_type_number.asp#:~:text=The%20%3Cinput%20type%3D%22number,specifies%20the%20minimum%20value%20allowed -->
+            <input type="number" name="level" id="level" min="0" max="9" value="<%= spell.level %>">
+
+            <label for="description">Description: </label>
+            <textarea name="description" id="description" cols="30" rows="10"><%= spell.description %></textarea>
+
+            <label for="range">Range: </label>
+            <input type="text" name="range" id="range" value="<%= spell.range %>">
+
+            <label for="school">School: </label>
+            <input type="text" name="school" id="school" value="<%= spell.school %>">
+
+            <label for="materials">Materials</label>
+            <input type="text" name="materials" id="materials" value="<%= spell.materials %>">
+
+            <label for="components">Components: </label>
+            <input type="text" name="components" id="components" value="<%= spell.components %>">
+
+            <label for="casting-time">Casting Time: </label>
+            <input type="text" name="casting-time" id="casting-time" value="<%= spell.castingTime %>">
+
+            <label for="duration">Duration: </label>
+            <input type="text" name="duration" id="duration" value="<%= spell.duration %>">
+
+        </form>
+    </main>
 </body>
 </html>
