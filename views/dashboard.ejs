@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="/style.css">
     <title>Spellbook Dashboard</title>
 </head>
 <body>
     <header>
-    <%- include('./partials/nav.ejs') %>
-    <a href="/spells/new">Add Spell</a>
-</header>
+        <nav>
+            <div><h1>MySpellbook</h1></div>
+            <div><a href="/spells/new">Add Spell</a></div>
+            <div>
+                <form action="/sessions?_method=DELETE" method="post">
+                <input type="submit" value="Log Out" />
+            </form>
+            </div>
+        </nav>
+    </header>
 <main>
     <ul>
         <% spells.forEach(spell => { %>
             <% switch (spell.level) {
                 case 0: %>
-                Cantrips
+                <h2>Cantrips</h2>
                 <li>
                     <a href="/spells/<%= spell._id %>">
                         <%= spell.name %>
@@ -25,7 +32,7 @@
                 </li>
                     <% break;
                 case 1: %>
-                Level 1 spells
+                <h2>Level 1 spells</h2>
                 <li>
                     <a href="/spells/<%= spell._id %>">
                         <%= spell.name %>
@@ -33,7 +40,7 @@
                 </li>
                 <% break;
                 case 2: %>
-                Level 2 spells
+                <h2>Level 2 spells</h2>
                 <li>
                     <a href="/spells/<%= spell._id %>">
                         <%= spell.name %>
@@ -41,7 +48,7 @@
                 </li>
                    <% break;
                    case 3: %>
-                Level 3 spells
+                <h2>Level 3 spells</h2>
                 <li>
                     <a href="/spells/<%= spell._id %>">
                         <%= spell.name %>
@@ -49,7 +56,7 @@
                 </li>
                    <% break;
                    case 4: %>
-                Level 4 spells
+                <h2>Level 4 spells</h2>
                 <li>
                     <a href="/spells/<%= spell._id %>">
                         <%= spell.name %>

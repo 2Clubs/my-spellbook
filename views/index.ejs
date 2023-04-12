@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="/style.css"></link>
     <title>Spellbook</title>
 </head>
 <body>
-    <%- include('./partials/nav') %>
+    <header>
+        <nav>
+        <div><h1>MySpellbook</h1></div>
+        <div><a href="/users/new" id="register">Register</a></div>
+    </nav>
+</header>
+<main>
     <form action="/sessions" method="post" id="login">
         <label for="email">Email:</label>
         <input type="email" name="email" id="email">
@@ -18,5 +24,6 @@
 
         <input type="submit" value="Login">
     </form>
+</main>
 </body>
 </html>

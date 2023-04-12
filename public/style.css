@@ -10,13 +10,32 @@
 }
 nav {    
     display: flex;
-    background-color: brown;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-image: url("CurseofStrahd_Throne_1280x960_Wallpaper.jpeg");
+    background-size:cover;
+    background-repeat: no-repeat;
     align-items: center;
-    justify-content: space-between;
     padding: 0 10px;
     color: wheat;
     font-family: 'Mr Eaves';
+    font-size: xx-large;
 }
+h1 {
+    margin: 0
+}
+nav > div {
+    margin: 30px 10px;
+}
+nav > div:first-child {
+    margin-right: auto;
+}
+nav > div > a {
+    color: wheat;
+    text-decoration: none;
+    font-size: x-large;
+}
+
 body {
     background-color: rgb(234, 233, 222);
     font-family: Bookinsanity;

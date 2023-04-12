@@ -4,12 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="/style.css">
     <title><%= spell.name %></title>
 </head>
 <body>
     <header>
-        <%- include('../partials/nav.ejs') %> <a href="/spells/<%= spell._id %>/edit">Edit</a>
+<nav>
+    <div>
+        <div><h1>MySpellbook</h1></div>
+        <a href="/spells/<%= spell._id %>/edit">Edit</a>
+        <form action="/sessions?_method=DELETE" method="post">
+        <input type="submit" value="Log Out" />
+    </form>
+    </div>
+</nav>
     </header>
     <main>
     <h1><%= spell.name %> - 

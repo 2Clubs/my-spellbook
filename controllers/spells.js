@@ -3,6 +3,8 @@ const express = require('express')
 const spellsRouter = express.Router()
 const Spell = require('../models/spells')
 
+
+
 // Index
 spellsRouter.get('/', async (req, res) => {
     const allSpells = await Spell.find({})
@@ -28,12 +30,12 @@ spellsRouter.delete('/:id', async (req, res) => {
 // Update
 spellsRouter.put('/:id', async (req, res) => {
     await Spell.findByIdAndUpdate(req.params.id, req.body)
-    res.redirect('/')
+    res.redirect('/spells')
 })
 // Create
 spellsRouter.post('/', (req, res) => {
     const createdSpell = new Spell(req.body)
-    createdSpell.save().then(res.redirect('/'))
+    createdSpell.save().then(res.redirect('/spells'))
 })
 
 // Edit
