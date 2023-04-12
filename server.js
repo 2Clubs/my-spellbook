@@ -25,6 +25,7 @@ app.use(
 );
 app.use(methodOverride("_method"));
 app.use(express.static('public'))
+app.use(express.static('public/fonts'))
 // Routes / Controllers
 
 const spellsController = require("./controllers/spells");

@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Mr Eaves";
+    src: url('fonts/Mr\ Eaves\ Small\ Caps.otf');
+}
+@font-face {
+    font-family: "Bookinsanity";
+    src: url('fonts/Bookinsanity.otf');
+}
+nav {    
+    display: flex;
+    background-color: brown;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    color: wheat;
+    font-family: 'Mr Eaves';
+}
+body {
+    background-color: rgb(234, 233, 222);
+    font-family: Bookinsanity;
+}
