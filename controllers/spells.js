@@ -12,7 +12,18 @@ spellsRouter.get('/', async (req, res) => {
     })
 })
 
+// New
+spellsRouter.get('/new', (req, res) => {
+    res.render('spells/new.ejs', {
+    currentUser: req.session.currentUser
+    })
+})
+
 // Destroy
+spellsRouter.delete('/:id', async (req, res) => {
+    await Spell.findByIdAndRemove(req.params.id)
+    res.redirect('/')
+})
 
 // Update
 
