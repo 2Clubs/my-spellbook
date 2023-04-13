@@ -12,10 +12,10 @@
 <nav>
     <div><h1>MySpellbook</h1></div>
     <div><a href="/"id="home">Home</a></div>
-    <div><a href="/spells/<%= spell._id %>/edit">Edit</a></div>
+
     <div>
         <form action="/sessions?_method=DELETE" method="post">
-        <input type="submit" value="Log Out" />
+        <input class="log-out" type="submit" value="Log Out" />
     </form>
     </div>
 </nav>
@@ -46,7 +46,7 @@
 <section id="extras">
     <div id="components">
         <% if (spell.components.includes('M')) { %>
-            Components: <ul>
+            <span>Components: </span><ul>
                 <% spell.components.forEach(component => { %>
                     <li>
                         <%= component %>
@@ -55,7 +55,7 @@
                     (<%= spell.materials %>)
                 </ul>
         <% } else { %>
-            Components: 
+           <span>Components: </span>
             <ul>
         <% spell.components.forEach(component => { %>
             <li>
@@ -67,9 +67,14 @@
 
 </div>
 </section>
+<div>
+    <form action="/spells/<%= spell._id %>/edit">
+    <input type="submit" value="Edit Spell">
+</form>
 <form action="/spells/<%= spell._id %>?_method=DELETE" method="post">
 <input type="submit" value="DELETE SPELL">
 </form>
+</div>
 </main>
 </body>
 </html>

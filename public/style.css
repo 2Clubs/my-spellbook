@@ -1,42 +1,214 @@
-/* the fonts are taken from https://www.reddit.com/r/UnearthedArcana/comments/3vpphx/5e_font_package_embeddable_cc_edition/ */
+/* the fonts and how to implement them are taken from https://www.reddit.com/r/UnearthedArcana/comments/3vpphx/5e_font_package_embeddable_cc_edition/ */
 
 @font-face {
-    font-family: "Mr Eaves";
-    src: url('fonts/Mr\ Eaves\ Small\ Caps.otf');
+  font-family: "Mr Eaves";
+  src: url("fonts/Mr\ Eaves\ Small\ Caps.otf");
 }
 @font-face {
-    font-family: "Bookinsanity";
-    src: url('fonts/Bookinsanity.otf');
+  font-family: "Bookinsanity";
+  src: url("fonts/Bookinsanity.otf");
 }
-nav {    
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    background-image: url("Banner.png");
-    background-size:cover;
-    background-repeat: no-repeat;
-    align-items: center;
-    padding: 0 10px;
-    color: wheat;
-    font-family: 'Mr Eaves';
-    font-size: xx-large;
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-image: url("Banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  padding: 0 10px;
+  color: wheat;
+  font-family: "Mr Eaves";
+  font-size: xx-large;
 }
 h1 {
-    margin: 0
+  margin: 0;
 }
 nav > div {
-    margin: 30px 10px;
+  margin: 30px 10px;
 }
 nav > div:first-child {
-    margin-right: auto;
+  margin-right: auto;
 }
 nav > div > a {
-    color: wheat;
-    text-decoration: none;
-    font-size: x-large;
+  color: wheat;
+  text-decoration: none;
+  font-size: x-large;
 }
 
 body {
-    background-color: rgb(234, 233, 222);
-    font-family: Bookinsanity;
+  background-color: rgb(234, 233, 222);
+  font-family: Bookinsanity;
+}
+
+#login-section {
+    display: flex;
+    justify-content: center;
+  }
+  
+  #login-section > div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: saddlebrown;
+    border-radius: 5%;
+    margin-top: 100px;
+  }
+  
+  #login-section > div > h1 {
+    text-align: center;
+    color: wheat;
+  }
+  
+  #login-section > div > form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  #login-section > div > form > input {
+    margin-bottom: 10px;
+  }
+  
+  #login-section > div > form > label {
+    color: wheat;
+  }
+
+#register {
+  display: flex;
+  justify-content: center;
+}
+
+#register > div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: saddlebrown;
+  border-radius: 5%;
+  margin-top: 100px;
+}
+
+#register > div > h1 {
+  text-align: center;
+  color: wheat;
+}
+
+#register > div > form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#register > div > form > input {
+  margin-bottom: 10px;
+}
+
+#register > div > form > label {
+  color: wheat;
+}
+
+#dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#dashboard > h2 {
+  display: flex;
+  justify-content: center;
+}
+
+#dashboard > li {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+#range {
+  padding-bottom: 10px;
+}
+
+#casting-time {
+  padding-bottom: 10px;
+}
+
+#duration {
+  padding-bottom: 10px;
+}
+
+#edit-page {
+  display: flex;
+  justify-content: center;
+}
+
+#edit-page > div {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+#edit-page > div > h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#edit-page > div > form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#edit-page > div > form > input {
+  margin-bottom: 10px;
+}
+
+#edit-page > div > form > textarea {
+  margin-bottom: 10px;
+}
+
+#add-page {
+  display: flex;
+  justify-content: center;
+}
+
+#add-page > div {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+
+#add-page > div > h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#add-page > div > form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+#add-page > div > form > input {
+  margin-bottom: 10px;
+}
+
+#add-page > div > form > textarea {
+  margin-bottom: 10px;
+}
+
+/* Learned changing the button from https://stackoverflow.com/questions/1367409/how-to-make-button-look-like-a-link */
+.log-out {
+    background: none;
+    border: none;
+    padding: 0;
+    color: wheat;
+    font-family: 'Mr Eaves';
+    font-size: x-large;
+}
+
+.log-out:hover {
+    cursor: pointer;
 }

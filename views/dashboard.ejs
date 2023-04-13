@@ -14,13 +14,13 @@
         <div><a href="/spells/new">Add Spell</a></div>
         <div>
           <form action="/sessions?_method=DELETE" method="post">
-            <input type="submit" value="Log Out" />
+            <input class="log-out" type="submit" value="Log Out" />
           </form>
         </div>
       </nav>
     </header>
     <main>
-      <ul>
+      <ul id="dashboard">
         <% for( let index = 0; index < spells.length; index++ ) { if
         (spells[index].level===0) { %>
         <h2>Cantrips</h2>
@@ -42,7 +42,7 @@
         <% for( let index = 0; index < spells.length; index++ ) { if
         (spells[index].level===2) { %>
         <h2>2nd Level Spells</h2>
-        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 3) { %>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 2) { %>
         <li>
           <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
         </li>
