@@ -2,7 +2,7 @@
 
 As a regular player of table-top role-playing games, I know first hand how difficult managing ones spells can be. This app attemps to aleviate some of the difficulty of keeping track of the spells in a player character's spellbook.
 
-![MySpellBook](/public/Screenshot%202023-04-12%20at%208.25.05%20PM.png)
+![MySpellBook](/public/Screenshot%20of%20App.png)
 
 ## Technologies Used
 
@@ -25,4 +25,4 @@ The app is deployed on Heroku [here](https://my-dnd-spellbook.herokuapp.com/). O
 
 ### ERD
 
-![ERD](/public/Screenshot%202023-04-13%20at%209.06.40%20AM.png)
+![ERD](/public/ERD.png)
