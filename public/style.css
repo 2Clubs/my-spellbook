@@ -12,7 +12,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    background-image: url("CurseofStrahd_Throne_1280x960_Wallpaper.jpeg");
+    background-image: url("Banner.png");
     background-size:cover;
     background-repeat: no-repeat;
     align-items: center;
