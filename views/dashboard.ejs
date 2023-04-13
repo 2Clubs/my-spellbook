@@ -1,111 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Spellbook Dashboard</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div><h1>MySpellbook</h1></div>
-            <div><a href="/spells/new">Add Spell</a></div>
-            <div>
-                <form action="/sessions?_method=DELETE" method="post">
-                <input type="submit" value="Log Out" />
-            </form>
-            </div>
-        </nav>
+      <nav>
+        <div><h1>MySpellbook</h1></div>
+        <div><a href="/spells/new">Add Spell</a></div>
+        <div>
+          <form action="/sessions?_method=DELETE" method="post">
+            <input type="submit" value="Log Out" />
+          </form>
+        </div>
+      </nav>
     </header>
-<main>
-    <ul>
-        <% spells.forEach(spell => { %>
-            <% switch (spell.level) {
-                case 0: %>
-                <h2>Cantrips</h2>
-                <li>
-                    <a href="/spells/<%= spell._id %>">
-                        <%= spell.name %>
-                    </a>
-                </li>
-                    <% break;
-                case 1: %>
-                <h2>Level 1 spells</h2>
-                <li>
-                    <a href="/spells/<%= spell._id %>">
-                        <%= spell.name %>
-                    </a>
-                </li>
-                <% break;
-                case 2: %>
-                <h2>Level 2 spells</h2>
-                <li>
-                    <a href="/spells/<%= spell._id %>">
-                        <%= spell.name %>
-                    </a>
-                </li>
-                   <% break;
-                   case 3: %>
-                <h2>Level 3 spells</h2>
-                <li>
-                    <a href="/spells/<%= spell._id %>">
-                        <%= spell.name %>
-                    </a>
-                </li>
-                   <% break;
-                   case 4: %>
-                <h2>Level 4 spells</h2>
-                <li>
-                    <a href="/spells/<%= spell._id %>">
-                        <%= spell.name %>
-                    </a>
-                </li>
-                   <% break;
-                   case 5: %>
-                Level 5 spells
-                <li>
-                    <a href="/spells/<%= spell._id %>">
-                        <%= spell.name %>
-                    </a>
-                </li>
-                   <% break;
-                   case 6: %>
-                Level 6 spells
-                <li>
-                    <a href="/spells/<%= spell._id %>">
-                        <%= spell.name %>
-                    </a>
-                </li>
-                   <% break;
-                   case 7: %>
-                Level 7 spells
-                <li>
-                    <a href="/spells/<%= spell._id %>">
-                        <%= spell.name %>
-                    </a>
-                </li>
-                   <% break;
-                   case 8: %>
-                Level 8 spells
-                <li>
-                    <a href="/spells/<%= spell._id %>">
-                        <%= spell.name %>
-                    </a>
-                </li>
-                   <% break;
-                   case 9: %>
-                Level 9 spells
-                <li>
-                    <a href="/spells/<%= spell._id %>">
-                        <%= spell.name %>
-                    </a>
-                </li>
-                   <% break;
-            } %>
-        <% }) %>
-    </ul>
-</main>
-</body>
+    <main>
+      <ul>
+        <% for( let index = 0; index < spells.length; index++ ) { if
+        (spells[index].level===0) { %>
+        <h2>Cantrips</h2>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 0) { %>
+        <li>
+          <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
+        </li>
+        <% } }) %>
+
+        <% for( let index = 0; index < spells.length; index++ ) { if
+        (spells[index].level===1) { %>
+        <h2>1st Level Spells</h2>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 1) { %>
+        <li>
+          <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
+        </li>
+        <% } }) %>
+
+        <% for( let index = 0; index < spells.length; index++ ) { if
+        (spells[index].level===2) { %>
+        <h2>2nd Level Spells</h2>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 3) { %>
+        <li>
+          <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
+        </li>
+        <% } }) %>
+
+        <% for( let index = 0; index < spells.length; index++ ) { if
+        (spells[index].level===3) { %>
+        <h2>3rd Level Spells</h2>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 3) { %>
+        <li>
+          <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
+        </li>
+        <% } }) %>
+
+        <% for( let index = 0; index < spells.length; index++ ) { if
+        (spells[index].level===4) { %>
+        <h2>4th Level Spells</h2>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 4) { %>
+        <li>
+          <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
+        </li>
+        <% } }) %>
+
+        <% for( let index = 0; index < spells.length; index++ ) { if
+        (spells[index].level===5) { %>
+        <h2>5th Level Spells</h2>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 5) { %>
+        <li>
+          <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
+        </li>
+        <% } }) %>
+
+        <% for( let index = 0; index < spells.length; index++ ) { if
+        (spells[index].level===6) { %>
+        <h2>6th Level Spells</h2>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 6) { %>
+        <li>
+          <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
+        </li>
+        <% } }) %>
+
+        <% for( let index = 0; index < spells.length; index++ ) { if
+        (spells[index].level===7) { %>
+        <h2>7th Level Spells</h2>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 7) { %>
+        <li>
+          <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
+        </li>
+        <% } }) %>
+
+        <% for( let index = 0; index < spells.length; index++ ) { if
+        (spells[index].level===8) { %>
+        <h2>8th Level Spells</h2>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 8) { %>
+        <li>
+          <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
+        </li>
+        <% } }) %>
+
+        <% for( let index = 0; index < spells.length; index++ ) { if
+        (spells[index].level===9) { %>
+        <h2>9th Level Spells</h2>
+        <% break; } }%> <% spells.forEach(spell => { if (spell.level === 9) { %>
+        <li>
+          <a href="/spells/<%= spell._id %>"> <%= spell.name %> </a>
+        </li>
+        <% } }) %>
+      </ul>
+    </main>
+  </body>
 </html>
