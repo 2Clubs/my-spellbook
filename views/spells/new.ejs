@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="/style.css"></link>
     <title>Add Spell</title>
 </head>
 <body>
     <header>
+        <nav>
+            <div><h1>MySpellbook</h1></div>
         <div><a href="/"id="home">Home</a></div>
         <div>
             <form action="/sessions?_method=DELETE" method="post">
             <input type="submit" value="Log Out" />
         </form>
         </div>
+    </nav>
     </header>
     <main>
         <form action="/spells" method="post" id="add-spell">
