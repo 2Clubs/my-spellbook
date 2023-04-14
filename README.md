@@ -1,6 +1,6 @@
 # MySpellbook
 
-As a regular player of table-top role-playing games, I know first hand how difficult managing ones spells can be. This app attemps to aleviate some of the difficulty of keeping track of the spells in a player character's spellbook.
+As a regular player of table-top role-playing games, I know first hand how difficult managing spells can be. This app attemps to aleviate some of the difficulty of keeping track of the spells in a player character's spellbook.
 
 ![MySpellBook](/public/Screenshot%20of%20App.png)
 
