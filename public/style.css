@@ -37,8 +37,9 @@ nav > div > a {
 }
 
 body {
-  background-color: rgb(234, 233, 222);
+  /* background-color: rgb(234, 233, 222); */
   font-family: Bookinsanity;
+  background-image: url('backgrounds\ no\ line.jpg');
 }
 
 #login-section {
@@ -211,4 +212,14 @@ li {
 
 .log-out:hover {
     cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons > form > input {
+  margin: 20px;
+  width: 120px;
 }
