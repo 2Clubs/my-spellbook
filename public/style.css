@@ -21,6 +21,14 @@ nav {
   font-family: "Mr Eaves";
   font-size: xx-large;
 }
+li > a {
+  text-decoration: none;
+  border-radius: 5%;
+  color: saddlebrown;
+}
+li > a:hover {
+  box-shadow: 0 0 25px 10px slategray;
+}
 h1 {
   margin: 0;
 }
@@ -222,4 +230,10 @@ li {
 .buttons > form > input {
   margin: 20px;
   width: 120px;
+}
+
+#components {
+  display: inline;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

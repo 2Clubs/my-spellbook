@@ -30,13 +30,7 @@
         </h1>
     <section id="description">
     <h2>Description</h2>
-    <ul>
-        <% spell.description.forEach(paragraph => { %>
-         <li>
-            <%= paragraph %>
-         </li>
-        <% }) %>
-    </ul>
+    <p><%= spell.description %></p>
 </section>
 <section id="sub-description">
     <div id="range">Range: <%= spell.range %></div>

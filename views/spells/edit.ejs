@@ -45,9 +45,21 @@
             <input type="text" name="materials" id="materials" value="<%= spell.materials %>">
 
             <label for="components">Components: </label>
-            <input type="checkbox" name="components[0]" id="components" value="V">
-            <input type="checkbox" name="components[1]" id="components" value="S">
-            <input type="checkbox" name="components[2]" id="components" value="M">
+            <div class="components">
+            <label for="verbal">V</label>
+            <input type="checkbox" name="components[0]" id="verbal" value="V"<% if (spell.components[0] === 'V') { %>
+                checked>
+            <% } %>
+            <label for="somatic">S</label>
+            <input type="checkbox" name="components[1]" id="somatic" value="S"<% if (spell.components[1] === 'S') { %>
+                checked>
+            <% } %>
+            <label for="material">M</label>
+            <input type="checkbox" name="components[2]" id="material" value="M"<% if (spell.components[2] === 'M') { %>
+                checked>
+            <% } %>
+            </div>
+
 
             <label for="casting-time">Casting Time: </label>
             <input type="text" name="casting-time" id="casting-time" value="<%= spell.castingTime %>">
