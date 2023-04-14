@@ -37,4 +37,16 @@ module.exports = [
     castingTime: "1 action",
     duration: "Instantaneous",
   },
+  {
+    name: "Turing's Paradox",
+    level: 8,
+    description: 
+      "You conjure a paradoxical enchantment that confounds the minds of your enemies. Choose up to five creatures within range. Each target must make a Wisdom saving throw or become stunned for the duration of the spell. While under the effects of this spell, the targets are trapped in a Turing machine-like loop of contradictory logic puzzles, unable to break free until the spell ends or they succeed on a Wisdom saving throw at the end of each of their turns. Additionally, each time a target fails its saving throw, it takes 8d8 psychic damage as its mind is wracked with the illogical paradox. At Higher Levels: When you cast this spell using a spell slot of 9th level, the damage increases to 10d8. In addition, the range of the spell increases to 120 feet, and you can target up to ten creatures within range.",
+    range: "60 feet",
+    school: "Enchantment",
+    materials: "A small piece of paper with a logic puzzle on it",
+    components: ["V", "S", "M"],
+    castingTime: "1 action",
+    duration: "Concentration, up to 1 minute",
+  },
 ];
